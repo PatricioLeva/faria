@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+}
+
+.contenedor{
+    background: cadetblue;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+p{
+    font-size: xx-large;
+    padding: 15%;
+}
+
+button{
+    font-size: xx-large;
+    padding: 0.75em;
+}
+
+#yesBtn{
+    transform: translate(-100%,0);
+}
+
+#noBtn{
+    position: absolute;
+}
+<!DOCTYPEhtml >
+< html  lang =" es " >
+< cabeza >
+    < juego de caracteres meta  =" UTF-8 " >
+    < meta  http-equiv =" X-UA-Compatible " content =" IE=edge " >
+    < meta  name =" viewport " content =" ancho=ancho-del-dispositivo, escala-inicial=1.0 " >
+    < título > Declaración </ título >
+    < enlace  rel =" hoja de estilo " href =" estilos.css " >
+</ cabeza >
+< cuerpo >
+
+    < div  clase =" contenedor " >
+        < p > ¿Quieres ser mi Novia? </ p >
+        < botón  id =" yesBtn " > Si </ botón >
+        < botón  id =" noBtn " > No </ botón >
+    </ div >
+    < script  src =" index.js " > </ script >
+
+</ cuerpo >
+</ html > 
+@@ -0,0 +1,15 @@
+const  yesBtn  =  documento . querySelector ( '#yesBtn' ) ;
+
+síBtn . addEventListener ( 'clic' , función  ( )  {
+    alerta ( 'Sabia que ibas a decir que si uwu' )
+} ) ;
+
+const  noBtn  =  documento . querySelector ( '#noBtn' ) ;
+
+noBtn _ addEventListener ( 'mouseover' ,  función  ( )  {
+    const  randomX  =  parseInt ( Math . random ( ) * 100 ) ;
+    const  randomY  =  parseInt ( Math . random ( ) * 100 ) ;
+    noBtn _ estilo _ setProperty ( 'superior' , randomY + '%' ) ;
+    noBtn _ estilo _ setProperty ( 'izquierda' , randomX + '%' ) ;
+    noBtn _ estilo _ setProperty ( 'transformar' , `traducir(- ${ randomX } %,- ${ randomY } %)` ) ;
+} ) 
